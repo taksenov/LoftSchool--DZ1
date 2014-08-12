@@ -1,0 +1,246 @@
+/* author = taksenov@gmail.com */
+@font-face {
+    font-family: "MyriadPro";
+    src: url("../fonts/myriadpro/myriadpro.eot");
+    src: url("../fonts/myriadpro/myriadpro.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/myriadpro/myriadpro.woff") format("woff"),
+         url("../fonts/myriadpro/myriadpro.ttf") format("truetype"),
+         url("../fonts/myriadpro/myriadpro.svg#MyriadPro") format("svg");
+
+}
+/* ------------------------------------------- */
+*{
+    font-family: "MyriadPro", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+body{
+
+    background: url("../img/bg.png") #ffffff;
+}
+/* В данном блоке кода описан navbar.
+ В основном применяются селекторы по id */
+.ts_navbar_radius{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+#ts_navbar {
+    width: 944px;
+    height: 50px;
+    margin: 50px auto;
+    background: url("../img/navbar-bg.png") #f96810;
+    overflow: hidden;
+}
+/* грязный хак? для .centered (центровка логотипа) */
+.centered {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin: -19px 0 0 -73px;
+}
+#ts_navbar_logo {
+    width: 200px;
+    height: 50px;
+    float: left;
+    border-right: solid 2px #fc9f67;
+}
+#ts_navbar_labels {
+    height: 50px;
+    border: solid 1px #b54501;
+}
+#ts_navbar_labels ul {
+    list-style: none;
+}
+#ts_navbar_labels ul li {
+    float: left;
+    border: solid 2px #fc9f67;
+    border-left: none;
+    border-top: none;
+}
+#ts_navbar_labels ul li a {
+    color: #813101;
+    display: block;
+    text-decoration: none;
+    line-height: 50px;
+    text-align: center;
+    width: 90px;
+    height: 50px;
+    border-bottom: solid 1px #b54501;
+    font-weight: 700;
+}
+#ts_navbar_labels ul li a:hover {
+    background: #d4580d;
+    color: #ffffff;
+    text-shadow: 0 0 5px #fff;
+    font-weight: 700;
+}
+.ts_navbar_search_radius {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+#ts_navbar_search {
+    float: right;
+    margin-right: 14px;
+    height: 20px;
+    width: 170px;
+    box-shadow: 0 1px 0 #fa7e34;
+    padding: 0 2px 0 22px;
+    background: url("../img/search-icon.png") #ffffff no-repeat /*left*/ 6px center;
+}
+/* ------------------------------------------- */
+/* В данном блоке кода описан slider.
+ В основном применяются селекторы через class */
+.ts_slider {
+    border: solid 1px #2c6f90;
+    width: 944px;
+    height: 350px;
+    margin: 60px auto;
+    background: url("../img/slider-bg.png") #4b7486;
+    color: #ffffff;
+}
+.ts_slider_right {
+    width: 239px;
+    height: 349px;
+    float: right;
+    /* взято с htmlbook.ru */
+    background: #000000;        /*Цвет фона */
+    opacity: 0.39;              /*Полупрозрачный фон */
+    filter: alpha(Opacity=39);  /*Прозрачность в IE */
+    color: #ffffff;             /* Цвет текста */
+    /* ------------------- */
+}
+.item h2 {
+   /* почему-то текст в слайдере остается серым,
+    видимо это из-за применения полупрозрачности
+    в селекторе .ts_slider_right. Как полечить не знаю.  */
+    color: #ffffff;
+    padding: 10px 10px 12px 20px;
+    opacity: 1;
+    filter: alpha(Opacity=100);
+    font-size: 30px;
+    overflow: hidden;
+    height: 64px;
+}
+.item p {
+    padding: 12px 10px 10px 20px;
+    opacity: 1;
+    filter: alpha(Opacity=100);
+    color: #dcdcdc;
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+    height: 180px;
+}
+/* ------------------------------------------- */
+/* Herounit */
+.ts_herounit {
+    margin: 57px auto;
+    color: #959595;
+    font-size: 26px;
+    font-weight: 400;
+    width: 600px;
+    height: 56px;
+    line-height: 1.2;
+}
+/* ------------------------------------------- */
+/* Divider */
+.ts_divider {
+    margin: 52px auto;
+    background-color: #d2d0d0;
+    width: 944px;
+    height: 1px;
+}
+/* ------------------------------------------- */
+/* Content */
+.ts_content {
+    margin: 64px auto;
+    width: 944px;
+}
+.ts_col {
+    border: none /*solid 1px #000000*/;
+}
+.ts_interval {
+    margin: 20px 0 0 0;
+}
+.ts_col h3 {
+    color: #494949;
+    font-size: 22px;
+    font-weight: 700;
+    padding-top: 0;
+    margin-top: 0;
+}
+.ts_col_p {
+    color: #959595;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: justify;
+    padding-right: 0;
+    margin-right: 0;
+}
+.ts_col_a {
+    text-align: right;
+    color: #2a99d8;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 0;
+    padding-right: 0;
+    margin-right: 0;
+}
+/* ------------------------------------------- */
+/* Footer */
+.ts_footer {
+    margin: 60px auto 0;
+    background-color: #ececec;
+    width: 100%;
+    height: 340px;
+}
+.ts_footer_row {
+    margin: 60px auto 0;
+    width: 944px;
+    height: 290px;
+}
+.ts_footer_col {
+    margin: 60px auto;
+}
+.ts_footer_col img {
+    margin: 5px 0 20px 0;
+}
+.ts_ft_txt {
+    color: #5d5c5c;
+    font-size: 12px;
+    font-weight: 400;
+}
+.ts_footer_flimg {
+    margin: 0;
+}
+.ts_ft_h {
+    color: #8a8989;
+    font-size: 14px;
+    font-weight: 700;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.93);
+    width: 190px;
+    height: 20px;
+    }
+.ts_footer a {
+    font-style: italic;
+    color: #2a99d8;
+    font-size: 12px;
+    font-weight: 600;
+}
+.ts_ft_twitter {
+    color: #2a99d8;
+    font-size: 12px;
+    font-weight: 600;
+}
+/* ------------------------------------------- */
+
+
+
+
+
+
+
