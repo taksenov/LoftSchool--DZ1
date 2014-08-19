@@ -7,8 +7,13 @@
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.css" rel="stylesheet">
+
+<!-- !!!! УБРАТЬ !!!! -->
     <!-- MainCSS -->
-    <link href="css/main.css" rel="stylesheet">
+    <!--<link href="css/main.css" rel="stylesheet">-->
+
+    <!-- MainLESS -->
+    <link  href="css/main.less" rel="stylesheet/less" type="text/css">
 
     <!-- HTML5 Support for IE -->
     <!--[if lt IE 9]>
@@ -18,203 +23,234 @@
     <!-- Favicon -->
     <link href="img/favicon/favicon.png" rel="shortcut icon">
 
-
 </head>
 
 <body>
-    <!-- Navbar -->
-    <div id="ts_navbar" class="ts_navbar_radius">
-        <div id="ts_navbar_logo">
-            <a href="index.html"><img src="img/DESIGNIMO.png" alt="Логотип" class="centered"/></a>
+<!-- приводить в порядок Navbar ! -->
+    <div class="wrapper">
+        <div class="maincontent">
+            <header class="header">
+                <div class="container">
+                    <!-- Navbar -->
+                    <div class="navbar">
+                        <div class="navbar__logo">
+                            <a href="index.html">
+                                <img class="navbar__logo-img" src="img/navbar/DESIGNIMO.png" alt="Логотип"/>
+                                <span class="navbar__logo-text">Designimo</span>
+                            </a>
+                        </div>
+                        <div class="navbar__labels">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Archives</a></li>
+                                <li><a href="#">Store</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="navbar__search">
+                            <form action="">
+                                <div class="form">
+                                    <input class="navbar__search-input form-control" type="search" placeholder="search">
+                                    <input class="navbar__search-submit" type="submit" value=""/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Navbar -->
+                </div>
+            </header>
+
+            <!-- Slider -->
+            <section class="slider">
+                <div class="container">
+                    <div class="slider__block">
+                        <div class="slider__block-right carousel slide" id="carousel-example-generic" data-ride="carousel">
+                              <!-- Indicators -->
+                              <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                              </ol>
+
+                              <!-- Wrapper for slides -->
+                              <div class="carousel-inner">
+                                <div class="item active">
+                                    <h2>Design thats insanely great!</h2>
+                                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
+                                </div>
+                                <div class="item">
+                                    <h2>Заголовок 2</h2>
+                                    <p>Для особо одаренных, повторяю второй раз. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
+                                </div>
+                                <div class="item">
+                                    <h2>Заголовок 3</h2>
+                                    <p>Третий раз повторять не буду. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
+                                </div>
+                                <div class="item">
+                                    <h2>Заголовок 4</h2>
+                                    <p>Вообще, что-то сложно придумать! odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Slider -->
+
+            <!-- HeroUnit -->
+            <section class="herounit">
+                <div class="container">
+                    <div class="herounit__text">
+                        <p>Hey, welcome to your <strong>awesome</strong> web mock up.<br>
+                        You can place information here about what you do!</p>
+                    </div>
+                </div>
+            </section>
+            <!-- HeroUnit -->
+
+            <!-- Divider -->
+            <div class="divider"></div>
+            <!-- Divider -->
+
+                <!-- Content -->
+                <div class="content row">
+                    <div class="col-xs-2 col-sm-6 col-lg-6 col-md-6 content__col">
+                        <div class="row">
+                            <div class="row">
+                              <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ts_col">
+                                  <img src="img/content/contimg1.png" alt=""/>
+                              </div>
+                              <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 ts_col">
+                                  <h3>Events in your area</h3>
+                                  <p class="content__col-p">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                                  <p class="content__col-a"><a href="http://loftblog.ru/">Continue reading...</a></p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="content__interval"></div>
+                        <div class="row">
+                            <div class="row">
+                              <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ts_col">
+                                  <img src="img/content/contimg2.png" alt=""/>
+                              </div>
+                              <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 ts_col">
+                                  <h3>Make design fun</h3>
+                                  <p class="content__col-p">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                                  <p class="content__col-a"><a href="http://loftblog.ru/">Continue reading...</a></p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="content__interval"></div>
+                        <div class="row">
+                            <div class="row">
+                              <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ts_col">
+                                  <img src="img/content/contimg3.png" alt=""/>
+                              </div>
+                              <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 ts_col">
+                                  <h3>Think outside the box</h3>
+                                  <p class="content__col-p">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                                  <p class="content__col-a"><a href="http://loftblog.ru/">Continue reading...</a></p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content -->
         </div>
-        <div id="ts_navbar_labels">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Archives</a></li>
-                <li><a href="#">Store</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <form action="">
-                <div class="form-group">
-                    <input type="search" class="ts_navbar_search_radius form-control" placeholder="search" id="ts_navbar_search">
-                </div>
-            </form>
-        </div>
+        <div class="empty"></div>
     </div>
-    <!-- Navbar -->
-
-    <!-- Slider -->
-    <div class="ts_slider">
-        <div class="ts_slider_right carousel slide" id="carousel-example-generic" data-ride="carousel">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-              </ol>
-
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner">
-                <div class="item active">
-                    <h2>Design thats insanely great!</h2>
-                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
-                </div>
-                <div class="item">
-                    <h2>Заголовок 2</h2>
-                    <p>Для особо одаренных, повторяю второй раз. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
-                </div>
-                <div class="item">
-                    <h2>Заголовок 3</h2>
-                    <p>Третий раз повторять не буду. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
-                </div>
-                <div class="item">
-                    <h2>Заголовок 4</h2>
-                    <p>Вообще, что-то сложно придумать! odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
-                </div>
-              </div>
-        </div>
-    </div>
-    <!-- Slider -->
-
-    <!-- HeroUnit -->
-    <div class="ts_herounit">
-        <p align="center">Hey, welcome to your <strong>awesome</strong> web mock up. <br/>
-        You can place information here about what you do!</p>
-    </div>
-    <!-- HeroUnit -->
-
-    <!-- Divider -->
-    <div class="ts_divider"></div>
-    <!-- Divider -->
-
-    <!-- Content -->
-    <div class="ts_content row">
-        <div class="col-md-6 ts_col">
-            <div class="row">
-                <div class="row">
-                  <div class="col-sm-4 ts_col">
-                      <img src="img/contimg1.png" alt=""/>
-                  </div>
-                  <div class="col-sm-8 ts_col">
-                      <h3>Events in your area</h3>
-                      <p class="ts_col_p">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                      <p class="ts_col_a"><a href="http://loftblog.ru/">Continue reading...</a></p>
-                  </div>
-                </div>
-            </div>
-            <div class="ts_interval"></div>
-            <div class="row">
-                <div class="row">
-                  <div class="col-sm-4 ts_col">
-                      <img src="img/contimg2.png" alt=""/>
-                  </div>
-                  <div class="col-sm-8 ts_col">
-                      <h3>Make design fun</h3>
-                      <p class="ts_col_p">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                      <p class="ts_col_a"><a href="http://loftblog.ru/">Continue reading...</a></p>
-                  </div>
-                </div>
-            </div>
-            <div class="ts_interval"></div>
-            <div class="row">
-                <div class="row">
-                  <div class="col-sm-4 ts_col">
-                      <img src="img/contimg3.png" alt=""/>
-                  </div>
-                  <div class="col-sm-8 ts_col">
-                      <h3>Think outside the box</h3>
-                      <p class="ts_col_p">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                      <p class="ts_col_a"><a href="http://loftblog.ru/">Continue reading...</a></p>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Content -->
 
     <!-- Footer -->
-    <div class="ts_footer">
-        <div class="ts_footer_row">
-            <div class="row">
-                <div class="col-md-3 ts_footer_col">
-                    <img src="img/ft-logo.png" alt=""/>
-                    <p class="ts_ft_txt">
-                        Your about us information would fit here nicely.
-                        <br style="margin: 0 0 20px 0;"/>
-                        You could also just have an overview and use the link below to link to you full about us page.</p>
-                    <a href="http://loftblog.ru/">
-                        Find out more...
-                    </a>
-                </div>
-                <div class="col-md-3 ts_footer_col">
-                    <p class="ts_ft_h">
-                        TWITTER FEED
-                    </p>
-                    <p class="ts_ft_txt">
-                        hey @<span class="ts_ft_twitter">cazoobi</span> just been using WebZap, its pretty cool and a real time saver :)
-                        <br style="margin: 0 0 10px 0;"/>
-                        1 day ago
-                        <br style="margin: 0 0 20px 0;"/>
-                        Just purchased @<span class="ts_ft_twitter">uiparade</span>’s
-                        awesome web developer plugin for Photoshop check it out.</p>
-                    <a href="http://webzap.uiparade.com/">
-                       webzap.uiparade.com
-                    </a>
-                </div>
-                <div class="col-md-3 ts_footer_col">
-                    <p class="ts_ft_h">
-                        LATEST POST
-                    </p>
-                    <p class="ts_ft_txt">
-                        <strong>Your article title copy should fit here nicely!</strong>
-                        <br style="margin: 0 0 10px 0;"/>
-                        May 22, 2011 • 1 Comment
-                        <br style="margin: 0 0 20px 0;"/>
-                        This would be a great place to stick a descriptive excerpt from your insanley awesome article.
-                    </p>
-                    <a href="http://loftblog.ru/">
-                        Continue reading...
-                    </a>
-                </div>
-                <div class="col-md-3 ts_footer_col">
-                    <p class="ts_ft_h">
-                        FLICKR FEED
-                    </p>
+    <footer role="contentinfo">
+            <div class="footer">
+                <div class="footer__row">
                     <div class="row">
-                        <div class="col-sm-4 ts_footer_flimg">
-                            <a href="https://www.flickr.com/"><img src="img/ft-01.png" alt=""/></a>
+                        <div class="col-xs-2 col-sm-3 col-lg-3 col-md-3 footer__col">
+                            <img src="img/footer/ft-logo.png" alt=""/>
+                            <p class="footer__col-txt">
+                                Your about us information would fit here nicely.
+                            </p>
+                            <p class="footer__col-txt">
+                                You could also just have an overview and use the link below to link to you full about us page.
+                            </p>
+                            <a href="http://loftblog.ru/">
+                                Find out more...
+                            </a>
                         </div>
-                        <div class="col-sm-4 ts_footer_flimg">
-                            <a href="https://www.flickr.com/"><img src="img/ft-02.png" alt=""/></a>
+                        <div class="col-xs-2 col-sm-3 col-lg-3 col-md-3 footer__col">
+                            <p class="footer__col-herounit">
+                                TWITTER FEED
+                            </p>
+                            <p class="footer__col-txt">
+                                hey @<span class="footer__col-ttwitter">cazoobi</span> just been using WebZap, its pretty cool and a real time saver :)
+                            </p>
+                            <p class="footer__col-txt">
+                                1 day ago
+                            </p>
+                            <p class="footer__col-txt">
+                                Just purchased @<span class="footer__col-ttwitter">uiparade</span>’s
+                                awesome web developer plugin for Photoshop check it out.
+                            </p>
+                            <a href="http://webzap.uiparade.com/">
+                               webzap.uiparade.com
+                            </a>
                         </div>
-                        <div class="col-sm-4  ts_footer_flimg">
-                            <a href="https://www.flickr.com/"><img src="img/ft-03.png" alt=""/></a>
+                        <div class="col-xs-2 col-sm-3 col-lg-3 col-md-3 footer__col">
+                            <p class="footer__col-herounit">
+                                LATEST POST
+                            </p>
+                            <p class="footer__col-txt">
+                                <strong style=".myriad-c;">Your article title copy should fit here nicely!</strong>
+                            </p>
+                            <p class="footer__col-txt">
+                                May 22, 2011 • 1 Comment
+                            </p>
+                            <p class="footer__col-txt">
+                                This would be a great place to stick a descriptive excerpt from your insanley awesome article.
+                            </p>
+                            <a href="http://loftblog.ru/">
+                                Continue reading...
+                            </a>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4  ts_footer_flimg">
-                            <a href="https://www.flickr.com/"><img src="img/ft-04.png" alt=""/></a>
-                        </div>
-                        <div class="col-sm-4  ts_footer_flimg">
-                            <a href="https://www.flickr.com/"><img src="img/ft-05.png" alt=""/></a>
-                        </div>
-                        <div class="col-sm-4  ts_footer_flimg">
-                            <a href="https://www.flickr.com/"><img src="img/ft-06.png" alt=""/></a>
+                        <div class="col-xs-2 col-sm-3 col-lg-3 col-md-3 footer__col">
+                            <p class="footer__col-herounit">
+                                FLICKR FEED
+                            </p>
+                            <ul class="flickr-img">
+                                <li class="flickr-img__item">
+                                    <a class="flickr-img__link" href="https://www.flickr.com/"><img src="img/footer/ft-01.png" alt=""/></a>
+                                </li>
+                                <li class="flickr-img__item">
+                                    <a class="flickr-img__link" href="https://www.flickr.com/"><img src="img/footer/ft-02.png" alt=""/></a>
+                                </li>
+                                <li class="flickr-img__item">
+                                     <a class="flickr-img__link" href="https://www.flickr.com/"><img src="img/footer/ft-03.png" alt=""/></a>
+                                </li>
+                                <li class="flickr-img__item">
+                                     <a class="flickr-img__link" href="https://www.flickr.com/"><img src="img/footer/ft-04.png" alt=""/></a>
+                                </li>
+                                <li class="flickr-img__item">
+                                     <a class="flickr-img__link" href="https://www.flickr.com/"><img src="img/footer/ft-05.png" alt=""/></a>
+                                </li>
+                                <li class="flickr-img__item">
+                                     <a class="flickr-img__link" href="https://www.flickr.com/"><img src="img/footer/ft-06.png" alt=""/></a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+    </footer>
     <!-- Footer -->
 
     <!-- JS -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/tsslider.js"></script>
+    <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/less-1.7.4.min.js" type="text/javascript"></script>
+    <script src="js/tsslider.js" type="text/javascript"></script>
 
 </body>
 </html>

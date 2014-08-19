@@ -1,0 +1,429 @@
+/* author = taksenov@gmail.com */
+/* MainSettings */
+@import "mixins";
+
+@container-width : 940px;
+@footer-height   : 290px;
+@body-font       : "MyriadPro-Regular";
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    overflow: hidden;
+    min-width: @container-width + 20px;
+
+    .empty {
+        position: relative;
+        height: @footer-height;
+    }
+}
+ul {
+    padding: 0;
+    margin: 0;
+    li {
+        padding: 0;
+        left: 0;
+        list-style: none outside none;
+    }
+}
+p {
+    padding: 0;
+    margin: 0;
+}
+footer {
+    position: relative;
+    margin-top: -@footer-height;
+    height: @footer-height;
+}
+*{
+    font-family: "MyriadPro-Regular";
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+body{
+    background: url("../img/common/bg.png") #ffffff;
+}
+/* ------------------------------------------- */
+/* Fonts */
+@font-face {
+    font-family: "MyriadPro-Bold";
+    src: url("../fonts/myriadpro/MyriadPro-Bold.eot");
+    src: url("../fonts/myriadpro/MyriadPro-Bold.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/myriadpro/MyriadPro-Bold.woff") format("woff"),
+         url("../fonts/myriadpro/MyriadPro-Bold.ttf") format("truetype"),
+         url("../fonts/myriadpro/MyriadPro-Bold.svg#MyriadPro-Bold") format("svg");
+}
+@font-face {
+    font-family: "MyriadPro-BoldCond";
+    src: url("../fonts/myriadpro/MyriadPro-BoldCond.eot");
+    src: url("../fonts/myriadpro/MyriadPro-BoldCond.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/myriadpro/MyriadPro-BoldCond.woff") format("woff"),
+         url("../fonts/myriadpro/MyriadPro-BoldCond.ttf") format("truetype"),
+         url("../fonts/myriadpro/MyriadPro-BoldCond.svg#MyriadPro-BoldCond") format("svg");
+}
+@font-face {
+    font-family: "MyriadPro-BoldCondIt_0";
+    src: url("../fonts/myriadpro/MyriadPro-BoldCondIt_0.eot");
+    src: url("../fonts/myriadpro/MyriadPro-BoldCondIt_0.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/myriadpro/MyriadPro-BoldCondIt_0.woff") format("woff"),
+         url("../fonts/myriadpro/MyriadPro-BoldCondIt_0.ttf") format("truetype"),
+         url("../fonts/myriadpro/MyriadPro-BoldCondIt_0.svg#MyriadPro-BoldCondIt_0") format("svg");
+}
+@font-face {
+    font-family: "MyriadPro-Cond";
+    src: url("../fonts/myriadpro/MyriadPro-Cond.eot");
+    src: url("../fonts/myriadpro/MyriadPro-Cond.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/myriadpro/MyriadPro-Cond.woff") format("woff"),
+         url("../fonts/myriadpro/MyriadPro-Cond.ttf") format("truetype"),
+         url("../fonts/myriadpro/MyriadPro-Cond.svg#MyriadPro-Cond") format("svg");
+}
+@font-face {
+    font-family: "MyriadPro-It";
+    src: url("../fonts/myriadpro/MyriadPro-It.eot");
+    src: url("../fonts/myriadpro/MyriadPro-It.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/myriadpro/MyriadPro-It.woff") format("woff"),
+         url("../fonts/myriadpro/MyriadPro-It.ttf") format("truetype"),
+         url("../fonts/myriadpro/MyriadPro-It.svg#MyriadPro-It") format("svg");
+}
+@font-face {
+    font-family: "MyriadPro-Regular";
+    src: url("../fonts/myriadpro/MyriadPro-Regular.eot");
+    src: url("../fonts/myriadpro/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/myriadpro/MyriadPro-Regular.woff") format("woff"),
+         url("../fonts/myriadpro/MyriadPro-Regular.ttf") format("truetype"),
+         url("../fonts/myriadpro/MyriadPro-Regular.svg#MyriadPro-Regular") format("svg");
+}
+@font-face {
+    font-family: "MyriadPro-Semibold";
+    src: url("../fonts/myriadpro/MyriadPro-Semibold.eot");
+    src: url("../fonts/myriadpro/MyriadPro-Semibold.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/myriadpro/MyriadPro-Semibold.woff") format("woff"),
+         url("../fonts/myriadpro/MyriadPro-Semibold.ttf") format("truetype"),
+         url("../fonts/myriadpro/MyriadPro-Semibold.svg#MyriadPro-Semibold") format("svg");
+}
+.myriad-b {
+    font-family: "MyriadPro-Bold";
+}
+.myriad-bc {
+    font-family: "MyriadPro-BoldCond";
+}
+.myriad-bcit_0 {
+    font-family: "MyriadPro-BoldCondIt_0";
+}
+.myriad-c {
+    font-family: "MyriadPro-Cond";
+}
+.myriad-it {
+    font-family: "MyriadPro-It";
+}
+.myriad-r {
+    font-family: "MyriadPro-Regular";
+}
+.myriad-sb {
+    font-family: "MyriadPro-Semibold";
+}
+/* ------------------------------------------- */
+/* Maincontent */
+.maincontent {
+    padding-top: 50px;
+}
+/* ------------------------------------------- */
+/* Header */
+.header {
+    margin-bottom: 60px;
+}
+/* ------------------------------------------- */
+/* Navbar */
+.navbar {
+    .clearfix;
+    width: 940px;
+    height: 50px;
+    margin: auto;
+    background: #f96810; /* Для старых браузров */
+    background: linear-gradient(to top, #fa711e, #f95f01);
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid #b54501;
+}
+.navbar__logo {
+    display: block;
+    float: left;
+    width: 200px;
+    height: 50px;
+    position: relative;
+    border-top: 1px solid #fc9f67;
+    border-right: 1px solid #fc9f67;
+}
+.navbar__logo-img {
+    max-width: 150px;
+    max-height: 20px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.navbar__logo-text {
+    position: absolute;
+    top: 0;
+    left: -99999px;
+}
+.navbar__labels {
+    float: left;
+    height: 50px;
+    border-left: solid 1px #b54501;
+    ul {
+       .clearfix;
+    }
+    ul li {
+        float: left;
+        border-right: 1px solid #b54501;
+    }
+    ul li a {
+        color: #813101;
+        display: block;
+        text-decoration: none;
+        line-height: 50px;
+        text-align: center;
+        width: 90px;
+        height: 50px;
+        font-weight: 700;
+        font-size: 14px;
+        .transition(0.2s);
+        border-top: 1px solid #fc9f67;
+        border-right: 1px solid #fc9f67;
+        border-left: 1px solid #fc9f67;
+    }
+    ul li a:hover {
+        background: #d4580d;
+        color: #ffffff;
+        text-shadow: 0 0 5px #fff;
+        font-weight: 700;
+        font-size: 14px;
+    }
+}
+.navbar__search {
+    float: left;
+    margin-top: 15px;
+    margin-left: 7px;
+}
+.form {
+    position: relative;
+}
+.navbar__search-input {
+    background: #fff;
+    .border-radius(10px);
+    float: right;
+    margin-right: 14px;
+    height: 20px;
+    width: 170px;
+    box-shadow: 0 1px 0 #fa7e34;
+    padding: 0 2px 0 22px;
+}
+.navbar__search-submit {
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: url("../img/navbar/search-icon.png") 0 0 no-repeat;
+    width: 13px;
+    height: 12px;
+    border: 0 none;
+    padding: 0;
+}
+/* ------------------------------------------- */
+/* Slider */
+.slider {
+    margin-bottom: 50px;
+}
+.slider__block {
+    border: solid 1px #2c6f90;
+    width: 940px;
+    height: 350px;
+    margin: 0 auto;
+    background: url("../img/slider/slider-bg.png") #4b7486;
+    color: #ffffff;
+}
+.slider__block-right {
+    width: 239px;
+    height: 349px;
+    float: right;
+    /* взято с htmlbook.ru */
+    background: #000000;        /*Цвет фона */
+    opacity: 0.39;              /*Полупрозрачный фон */
+    filter: alpha(Opacity=39);  /*Прозрачность в IE */
+    color: #ffffff;             /* Цвет текста */
+    /* ------------------- */
+    margin: 0;
+    padding: 0;
+}
+.item h2 {
+    /* почему-то текст в слайдере остается серым,
+    видимо это из-за применения полупрозрачности
+    в селекторе .ts_slider_right. Как полечить не знаю.  */
+    .myriad-c;
+    color: #ffffff;
+    padding: 10px 10px 12px 20px;
+    opacity: 1;
+    filter: alpha(Opacity=100);
+    font-size: 30px;
+    overflow: hidden;
+    height: 64px;
+}
+.item p {
+    .myriad-r;
+    padding: 12px 10px 10px 20px;
+    opacity: 1;
+    filter: alpha(Opacity=100);
+    color: #dcdcdc;
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+    height: 180px;
+}
+/* ------------------------------------------- */
+/* HeroUnit */
+.herounit {
+    padding: 5px;
+    text-align: center;
+}
+.herounit__text {
+    .inlineblock;
+    width: 600px;
+    margin: 0 auto;
+    color: #959595;
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+    height: 50px;
+}
+/* ------------------------------------------- */
+/* Divider */
+.divider {
+    margin: 55px auto 0;
+    background-color: #d2d0d0;
+    width: 940px;
+    height: 1px;
+}
+/* ------------------------------------------- */
+/* Content */
+.content {
+    margin: 64px auto 0;
+    width: 940px;
+}
+.content__col {
+    border: none;
+    h3 {
+        .myriad-bc;
+        color: #494949;
+        font-size: 22px;
+        padding-top: 0;
+        margin-top: -4px;
+    }
+}
+.content__interval {
+    margin: 20px 0 0 0;
+}
+.content__col-p {
+    .myriad-r;
+    color: #959595;
+    font-size: 14px;
+    text-align: justify;
+    padding-right: 0;
+    margin-right: 0;
+    padding-top: 8px;
+}
+.content__col-a {
+    .myriad-it;
+    padding-top: 10px;
+    text-align: right;
+    color: #57a9dd;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 0;
+    padding-right: 0;
+    margin-right: 0;
+    padding-bottom: 0;
+}
+/* ------------------------------------------- */
+/* Footer */
+.footer {
+    margin: 0 auto 0;
+    background-color: #ececec;
+    width: 100%;
+    height: 340px;
+    a {
+        font-style: italic;
+        color: #2a99d8;
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
+.footer__row {
+    margin: 60px auto 0;
+    width: 940px;
+    height: 290px;
+}
+.footer__col {
+    margin: 60px auto;
+}
+.footer__col-txt {
+    .myriad-r;
+    color: #5d5c5c;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    p br {
+        margin-bottom: 20px;
+    }
+}
+.footer__col-herounit {
+    .myriad-bc;
+    color: #8a8989;
+    font-size: 14px;
+    font-weight: 700;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.93);
+    width: 190px;
+    height: 20px;
+    }
+.footer__col-ttwitter {
+    color: #2a99d8;
+    font-size: 12px;
+    font-weight: 600;
+}
+.flickr-img {
+    .clearfix;
+    margin-left: -20px;
+    margin-top: 10px;
+}
+.flickr-img__item {
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.flickr-img__link {
+    display: block;
+    padding: 2px;
+    background: #fff;
+    img {
+        display: block;
+        max-width: 52px;
+        max-height: 52px;
+    }
+}
+/* ------------------------------------------- */
+
+
+
+
+
+
+

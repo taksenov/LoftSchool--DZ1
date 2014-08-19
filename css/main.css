@@ -1,246 +1,458 @@
 /* author = taksenov@gmail.com */
+/* MainSettings */
+/* MIXINS */
+/* by https://bitbucket.org/wowua/ */
+.inlineblock {
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1 !ie;
+  display: inline !ie;
+}
+.clearfix {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  overflow: hidden;
+  min-width: 960px;
+}
+.wrapper .empty {
+  position: relative;
+  height: 290px;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  padding: 0;
+  left: 0;
+  list-style: none outside none;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+footer {
+  position: relative;
+  margin-top: -290px;
+  height: 290px;
+}
+* {
+  font-family: "MyriadPro-Regular";
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+body {
+  background: url("../img/common/bg.png") #ffffff;
+}
+/* ------------------------------------------- */
+/* Fonts */
 @font-face {
-    font-family: "MyriadPro";
-    src: url("../fonts/myriadpro/myriadpro.eot");
-    src: url("../fonts/myriadpro/myriadpro.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/myriadpro/myriadpro.woff") format("woff"),
-         url("../fonts/myriadpro/myriadpro.ttf") format("truetype"),
-         url("../fonts/myriadpro/myriadpro.svg#MyriadPro") format("svg");
-
+  font-family: "MyriadPro-Bold";
+  src: url("../fonts/myriadpro/MyriadPro-Bold.eot");
+  src: url("../fonts/myriadpro/MyriadPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/myriadpro/MyriadPro-Bold.woff") format("woff"), url("../fonts/myriadpro/MyriadPro-Bold.ttf") format("truetype"), url("../fonts/myriadpro/MyriadPro-Bold.svg#MyriadPro-Bold") format("svg");
+}
+@font-face {
+  font-family: "MyriadPro-BoldCond";
+  src: url("../fonts/myriadpro/MyriadPro-BoldCond.eot");
+  src: url("../fonts/myriadpro/MyriadPro-BoldCond.eot?#iefix") format("embedded-opentype"), url("../fonts/myriadpro/MyriadPro-BoldCond.woff") format("woff"), url("../fonts/myriadpro/MyriadPro-BoldCond.ttf") format("truetype"), url("../fonts/myriadpro/MyriadPro-BoldCond.svg#MyriadPro-BoldCond") format("svg");
+}
+@font-face {
+  font-family: "MyriadPro-BoldCondIt_0";
+  src: url("../fonts/myriadpro/MyriadPro-BoldCondIt_0.eot");
+  src: url("../fonts/myriadpro/MyriadPro-BoldCondIt_0.eot?#iefix") format("embedded-opentype"), url("../fonts/myriadpro/MyriadPro-BoldCondIt_0.woff") format("woff"), url("../fonts/myriadpro/MyriadPro-BoldCondIt_0.ttf") format("truetype"), url("../fonts/myriadpro/MyriadPro-BoldCondIt_0.svg#MyriadPro-BoldCondIt_0") format("svg");
+}
+@font-face {
+  font-family: "MyriadPro-Cond";
+  src: url("../fonts/myriadpro/MyriadPro-Cond.eot");
+  src: url("../fonts/myriadpro/MyriadPro-Cond.eot?#iefix") format("embedded-opentype"), url("../fonts/myriadpro/MyriadPro-Cond.woff") format("woff"), url("../fonts/myriadpro/MyriadPro-Cond.ttf") format("truetype"), url("../fonts/myriadpro/MyriadPro-Cond.svg#MyriadPro-Cond") format("svg");
+}
+@font-face {
+  font-family: "MyriadPro-It";
+  src: url("../fonts/myriadpro/MyriadPro-It.eot");
+  src: url("../fonts/myriadpro/MyriadPro-It.eot?#iefix") format("embedded-opentype"), url("../fonts/myriadpro/MyriadPro-It.woff") format("woff"), url("../fonts/myriadpro/MyriadPro-It.ttf") format("truetype"), url("../fonts/myriadpro/MyriadPro-It.svg#MyriadPro-It") format("svg");
+}
+@font-face {
+  font-family: "MyriadPro-Regular";
+  src: url("../fonts/myriadpro/MyriadPro-Regular.eot");
+  src: url("../fonts/myriadpro/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/myriadpro/MyriadPro-Regular.woff") format("woff"), url("../fonts/myriadpro/MyriadPro-Regular.ttf") format("truetype"), url("../fonts/myriadpro/MyriadPro-Regular.svg#MyriadPro-Regular") format("svg");
+}
+@font-face {
+  font-family: "MyriadPro-Semibold";
+  src: url("../fonts/myriadpro/MyriadPro-Semibold.eot");
+  src: url("../fonts/myriadpro/MyriadPro-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/myriadpro/MyriadPro-Semibold.woff") format("woff"), url("../fonts/myriadpro/MyriadPro-Semibold.ttf") format("truetype"), url("../fonts/myriadpro/MyriadPro-Semibold.svg#MyriadPro-Semibold") format("svg");
+}
+.myriad-b {
+  font-family: "MyriadPro-Bold";
+}
+.myriad-bc {
+  font-family: "MyriadPro-BoldCond";
+}
+.myriad-bcit_0 {
+  font-family: "MyriadPro-BoldCondIt_0";
+}
+.myriad-c {
+  font-family: "MyriadPro-Cond";
+}
+.myriad-it {
+  font-family: "MyriadPro-It";
+}
+.myriad-r {
+  font-family: "MyriadPro-Regular";
+}
+.myriad-sb {
+  font-family: "MyriadPro-Semibold";
 }
 /* ------------------------------------------- */
-*{
-    font-family: "MyriadPro", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    outline: none;
-}
-body{
-
-    background: url("../img/bg.png") #ffffff;
-}
-/* В данном блоке кода описан navbar.
- В основном применяются селекторы по id */
-.ts_navbar_radius{
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-}
-#ts_navbar {
-    width: 944px;
-    height: 50px;
-    margin: 50px auto;
-    background: url("../img/navbar-bg.png") #f96810;
-    overflow: hidden;
-}
-/* грязный хак? для .centered (центровка логотипа) */
-.centered {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    margin: -19px 0 0 -73px;
-}
-#ts_navbar_logo {
-    width: 200px;
-    height: 50px;
-    float: left;
-    border-right: solid 2px #fc9f67;
-}
-#ts_navbar_labels {
-    height: 50px;
-    border: solid 1px #b54501;
-}
-#ts_navbar_labels ul {
-    list-style: none;
-}
-#ts_navbar_labels ul li {
-    float: left;
-    border: solid 2px #fc9f67;
-    border-left: none;
-    border-top: none;
-}
-#ts_navbar_labels ul li a {
-    color: #813101;
-    display: block;
-    text-decoration: none;
-    line-height: 50px;
-    text-align: center;
-    width: 90px;
-    height: 50px;
-    border-bottom: solid 1px #b54501;
-    font-weight: 700;
-}
-#ts_navbar_labels ul li a:hover {
-    background: #d4580d;
-    color: #ffffff;
-    text-shadow: 0 0 5px #fff;
-    font-weight: 700;
-}
-.ts_navbar_search_radius {
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-}
-#ts_navbar_search {
-    float: right;
-    margin-right: 14px;
-    height: 20px;
-    width: 170px;
-    box-shadow: 0 1px 0 #fa7e34;
-    padding: 0 2px 0 22px;
-    background: url("../img/search-icon.png") #ffffff no-repeat /*left*/ 6px center;
+/* Maincontent */
+.maincontent {
+  padding-top: 50px;
 }
 /* ------------------------------------------- */
-/* В данном блоке кода описан slider.
- В основном применяются селекторы через class */
-.ts_slider {
-    border: solid 1px #2c6f90;
-    width: 944px;
-    height: 350px;
-    margin: 60px auto;
-    background: url("../img/slider-bg.png") #4b7486;
-    color: #ffffff;
+/* Header */
+.header {
+  margin-bottom: 60px;
 }
-.ts_slider_right {
-    width: 239px;
-    height: 349px;
-    float: right;
-    /* взято с htmlbook.ru */
-    background: #000000;        /*Цвет фона */
-    opacity: 0.39;              /*Полупрозрачный фон */
-    filter: alpha(Opacity=39);  /*Прозрачность в IE */
-    color: #ffffff;             /* Цвет текста */
-    /* ------------------- */
+/* ------------------------------------------- */
+/* Navbar */
+.navbar {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+  width: 940px;
+  height: 50px;
+  margin: auto;
+  background: #f96810;
+  /* Для старых браузров */
+  background: linear-gradient(to top, #fa711e, #f95f01);
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px solid #b54501;
+}
+.navbar:before,
+.navbar:after {
+  content: "";
+  display: table;
+}
+.navbar:after {
+  clear: both;
+}
+.navbar__logo {
+  display: block;
+  float: left;
+  width: 200px;
+  height: 50px;
+  position: relative;
+  border-top: 1px solid #fc9f67;
+  border-right: 1px solid #fc9f67;
+}
+.navbar__logo-img {
+  max-width: 150px;
+  max-height: 20px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.navbar__logo-text {
+  position: absolute;
+  top: 0;
+  left: -99999px;
+}
+.navbar__labels {
+  float: left;
+  height: 50px;
+  border-left: solid 1px #b54501;
+}
+.navbar__labels ul {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+.navbar__labels ul:before,
+.navbar__labels ul:after {
+  content: "";
+  display: table;
+}
+.navbar__labels ul:after {
+  clear: both;
+}
+.navbar__labels ul li {
+  float: left;
+  border-right: 1px solid #b54501;
+}
+.navbar__labels ul li a {
+  color: #813101;
+  display: block;
+  text-decoration: none;
+  line-height: 50px;
+  text-align: center;
+  width: 90px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  border-top: 1px solid #fc9f67;
+  border-right: 1px solid #fc9f67;
+  border-left: 1px solid #fc9f67;
+}
+.navbar__labels ul li a:hover {
+  background: #d4580d;
+  color: #ffffff;
+  text-shadow: 0 0 5px #fff;
+  font-weight: 700;
+  font-size: 14px;
+}
+.navbar__search {
+  float: left;
+  margin-top: 15px;
+  margin-left: 7px;
+}
+.form {
+  position: relative;
+}
+.navbar__search-input {
+  background: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  float: right;
+  margin-right: 14px;
+  height: 20px;
+  width: 170px;
+  box-shadow: 0 1px 0 #fa7e34;
+  padding: 0 2px 0 22px;
+}
+.navbar__search-submit {
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background: url("../img/navbar/search-icon.png") 0 0 no-repeat;
+  width: 13px;
+  height: 12px;
+  border: 0 none;
+  padding: 0;
+}
+/* ------------------------------------------- */
+/* Slider */
+.slider {
+  margin-bottom: 50px;
+}
+.slider__block {
+  border: solid 1px #2c6f90;
+  width: 940px;
+  height: 350px;
+  margin: 0 auto;
+  background: url("../img/slider/slider-bg.png") #4b7486;
+  color: #ffffff;
+}
+.slider__block-right {
+  width: 239px;
+  height: 349px;
+  float: right;
+  /* взято с htmlbook.ru */
+  background: #000000;
+  /*Цвет фона */
+  opacity: 0.39;
+  /*Полупрозрачный фон */
+  filter: alpha(opacity=39);
+  /*Прозрачность в IE */
+  color: #ffffff;
+  /* Цвет текста */
+  /* ------------------- */
+  margin: 0;
+  padding: 0;
 }
 .item h2 {
-   /* почему-то текст в слайдере остается серым,
+  /* почему-то текст в слайдере остается серым,
     видимо это из-за применения полупрозрачности
     в селекторе .ts_slider_right. Как полечить не знаю.  */
-    color: #ffffff;
-    padding: 10px 10px 12px 20px;
-    opacity: 1;
-    filter: alpha(Opacity=100);
-    font-size: 30px;
-    overflow: hidden;
-    height: 64px;
+  font-family: "MyriadPro-Cond";
+  color: #ffffff;
+  padding: 10px 10px 12px 20px;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  font-size: 30px;
+  overflow: hidden;
+  height: 64px;
 }
 .item p {
-    padding: 12px 10px 10px 20px;
-    opacity: 1;
-    filter: alpha(Opacity=100);
-    color: #dcdcdc;
-    font-size: 14px;
-    font-weight: 400;
-    overflow: hidden;
-    height: 180px;
+  font-family: "MyriadPro-Regular";
+  padding: 12px 10px 10px 20px;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  color: #dcdcdc;
+  font-size: 14px;
+  font-weight: 400;
+  overflow: hidden;
+  height: 180px;
 }
 /* ------------------------------------------- */
-/* Herounit */
-.ts_herounit {
-    margin: 57px auto;
-    color: #959595;
-    font-size: 26px;
-    font-weight: 400;
-    width: 600px;
-    height: 56px;
-    line-height: 1.2;
+/* HeroUnit */
+.herounit {
+  padding: 5px;
+  text-align: center;
+}
+.herounit__text {
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1 !ie;
+  display: inline !ie;
+  width: 600px;
+  margin: 0 auto;
+  color: #959595;
+  font-size: 26px;
+  line-height: 28px;
+  font-weight: 400;
+  height: 50px;
 }
 /* ------------------------------------------- */
 /* Divider */
-.ts_divider {
-    margin: 52px auto;
-    background-color: #d2d0d0;
-    width: 944px;
-    height: 1px;
+.divider {
+  margin: 55px auto 0;
+  background-color: #d2d0d0;
+  width: 940px;
+  height: 1px;
 }
 /* ------------------------------------------- */
 /* Content */
-.ts_content {
-    margin: 64px auto;
-    width: 944px;
+.content {
+  margin: 64px auto 0;
+  width: 940px;
 }
-.ts_col {
-    border: none /*solid 1px #000000*/;
+.content__col {
+  border: none;
 }
-.ts_interval {
-    margin: 20px 0 0 0;
+.content__col h3 {
+  font-family: "MyriadPro-BoldCond";
+  color: #494949;
+  font-size: 22px;
+  padding-top: 0;
+  margin-top: -4px;
 }
-.ts_col h3 {
-    color: #494949;
-    font-size: 22px;
-    font-weight: 700;
-    padding-top: 0;
-    margin-top: 0;
+.content__interval {
+  margin: 20px 0 0 0;
 }
-.ts_col_p {
-    color: #959595;
-    font-size: 14px;
-    font-weight: 400;
-    text-align: justify;
-    padding-right: 0;
-    margin-right: 0;
+.content__col-p {
+  font-family: "MyriadPro-Regular";
+  color: #959595;
+  font-size: 14px;
+  text-align: justify;
+  padding-right: 0;
+  margin-right: 0;
+  padding-top: 8px;
 }
-.ts_col_a {
-    text-align: right;
-    color: #2a99d8;
-    font-size: 14px;
-    font-weight: 600;
-    font-style: italic;
-    margin-bottom: 0;
-    padding-right: 0;
-    margin-right: 0;
+.content__col-a {
+  font-family: "MyriadPro-It";
+  padding-top: 10px;
+  text-align: right;
+  color: #57a9dd;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 0;
+  padding-right: 0;
+  margin-right: 0;
+  padding-bottom: 0;
 }
 /* ------------------------------------------- */
 /* Footer */
-.ts_footer {
-    margin: 60px auto 0;
-    background-color: #ececec;
-    width: 100%;
-    height: 340px;
+.footer {
+  margin: 0 auto 0;
+  background-color: #ececec;
+  width: 100%;
+  height: 340px;
 }
-.ts_footer_row {
-    margin: 60px auto 0;
-    width: 944px;
-    height: 290px;
+.footer a {
+  font-style: italic;
+  color: #2a99d8;
+  font-size: 12px;
+  font-weight: 600;
 }
-.ts_footer_col {
-    margin: 60px auto;
+.footer__row {
+  margin: 60px auto 0;
+  width: 940px;
+  height: 290px;
 }
-.ts_footer_col img {
-    margin: 5px 0 20px 0;
+.footer__col {
+  margin: 60px auto;
 }
-.ts_ft_txt {
-    color: #5d5c5c;
-    font-size: 12px;
-    font-weight: 400;
+.footer__col-txt {
+  font-family: "MyriadPro-Regular";
+  color: #5d5c5c;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
 }
-.ts_footer_flimg {
-    margin: 0;
+.footer__col-txt p br {
+  margin-bottom: 20px;
 }
-.ts_ft_h {
-    color: #8a8989;
-    font-size: 14px;
-    font-weight: 700;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.93);
-    width: 190px;
-    height: 20px;
-    }
-.ts_footer a {
-    font-style: italic;
-    color: #2a99d8;
-    font-size: 12px;
-    font-weight: 600;
+.footer__col-herounit {
+  font-family: "MyriadPro-BoldCond";
+  color: #8a8989;
+  font-size: 14px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.93);
+  width: 190px;
+  height: 20px;
 }
-.ts_ft_twitter {
-    color: #2a99d8;
-    font-size: 12px;
-    font-weight: 600;
+.footer__col-ttwitter {
+  color: #2a99d8;
+  font-size: 12px;
+  font-weight: 600;
+}
+.flickr-img {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+  margin-left: -20px;
+  margin-top: 10px;
+}
+.flickr-img:before,
+.flickr-img:after {
+  content: "";
+  display: table;
+}
+.flickr-img:after {
+  clear: both;
+}
+.flickr-img__item {
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.flickr-img__link {
+  display: block;
+  padding: 2px;
+  background: #fff;
+}
+.flickr-img__link img {
+  display: block;
+  max-width: 52px;
+  max-height: 52px;
 }
 /* ------------------------------------------- */
-
-
-
-
-
-
-
