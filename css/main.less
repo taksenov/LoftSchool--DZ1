@@ -46,6 +46,19 @@ footer {
 body{
     background: url("../img/common/bg.png") #ffffff;
 }
+.container {
+    width: @container-width;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+//colors ----
+@link-color: #2a99d8;
+
+//-----------
+
+
+
 /* ------------------------------------------- */
 /* Fonts */
 @font-face {
@@ -129,6 +142,7 @@ body{
 /* Maincontent */
 .maincontent {
     padding-top: 50px;
+    padding-bottom: 60px;
 }
 /* ------------------------------------------- */
 /* Header */
@@ -267,7 +281,10 @@ body{
 .item h2 {
     /* почему-то текст в слайдере остается серым,
     видимо это из-за применения полупрозрачности
-    в селекторе .ts_slider_right. Как полечить не знаю.  */
+    в селекторе .ts_slider_right. Как полечить знаю(!).
+    Вот ссылка на лекарство: http://habrahabr.ru/post/30565/
+    todo сделать правильную прозрачность!
+      */
     .myriad-c;
     color: #ffffff;
     padding: 10px 10px 12px 20px;
@@ -307,116 +324,108 @@ body{
 /* ------------------------------------------- */
 /* Divider */
 .divider {
-    margin: 55px auto 0;
+    margin: 55px auto 20px;
     background-color: #d2d0d0;
     width: 940px;
     height: 1px;
 }
 /* ------------------------------------------- */
-/* Content */
-.content {
-    margin: 64px auto 0;
-    width: 940px;
+/* events */
+.events__item {
+    .clearfix;
+    width: 470px;
+    margin-bottom: 20px;
 }
-.content__col {
-    border: none;
-    h3 {
-        .myriad-bc;
-        color: #494949;
-        font-size: 22px;
-        padding-top: 0;
-        margin-top: -4px;
+.events__pic {
+    display: block;
+    float: left;
+    width: 144px;
+
+    img {
+        display: block;
+        max-width: 144px;
+        max-height: 144px;
     }
 }
-.content__interval {
-    margin: 20px 0 0 0;
+.events__text {
+    width: 305px;
+    float: right;
 }
-.content__col-p {
-    .myriad-r;
-    color: #959595;
-    font-size: 14px;
-    text-align: justify;
-    padding-right: 0;
-    margin-right: 0;
-    padding-top: 8px;
+.events__title {
+    font-size: 22px;
+    line-height: 24px;
+    .myriad-c;
+    margin-bottom: 15px;
 }
-.content__col-a {
-    .myriad-it;
-    padding-top: 10px;
-    text-align: right;
-    color: #57a9dd;
-    font-size: 14px;
-    font-weight: 600;
-    font-style: italic;
-    margin-bottom: 0;
-    padding-right: 0;
-    margin-right: 0;
-    padding-bottom: 0;
+.events__description {
+    position: relative;
+    padding-bottom: 30px;
 }
+.events__description-text {
+    height: 70px;
+    overflow: hidden;
+}
+.events__description-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+ }
 /* ------------------------------------------- */
 /* Footer */
-.footer {
-    margin: 0 auto 0;
-    background-color: #ececec;
-    width: 100%;
-    height: 340px;
-    a {
-        font-style: italic;
-        color: #2a99d8;
-        font-size: 12px;
-        font-weight: 600;
-    }
-}
-.footer__row {
-    margin: 60px auto 0;
-    width: 940px;
-    height: 290px;
+.footer__container {
+    border-top: 1px solid #dedddd;
+    background: #ededed;
 }
 .footer__col {
+    .inlineblock;
+    width: 225px;
     margin: 60px auto;
 }
-.footer__col-txt {
-    .myriad-r;
-    color: #5d5c5c;
-    font-size: 14px;
-    font-weight: 400;
-    margin-top: 10px;
-    p br {
-        margin-bottom: 20px;
-    }
+.footer__logo {
+    margin-bottom: 20px;
 }
-.footer__col-herounit {
-    .myriad-bc;
-    color: #8a8989;
+.footer__text {
+    margin-bottom: 20px;
     font-size: 14px;
-    font-weight: 700;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.93);
-    width: 190px;
-    height: 20px;
-    }
+    line-height: 15px;
+}
+.footer__proceed {
+    color: @link-color;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+}
 .footer__col-ttwitter {
     color: #2a99d8;
     font-size: 12px;
     font-weight: 600;
 }
-.flickr-img {
-    .clearfix;
-    margin-left: -20px;
-    margin-top: 10px;
-}
-.flickr-img__item {
-    float: left;
-    margin-left: 20px;
+.footer__title {
+    text-transform: uppercase;
+    font-size: 14px;
+    .myriad-c;
+    line-height: 16px;
     margin-bottom: 20px;
 }
-.flickr-img__link {
+.flickr-gallery {
+    .clearfix;
+    margin-left: -20px;
+}
+.flickr-gallery__item {
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.flickr-gallery__link {
     display: block;
     padding: 2px;
-    background: #fff;
+    background: #ffffff;
+
     img {
         display: block;
-        max-width: 52px;
-        max-height: 52px;
+        max-width: 56px;
+        max-height: 56px;
+
     }
 }
 /* ------------------------------------------- */

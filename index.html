@@ -62,6 +62,46 @@
             </header>
 
             <!-- Slider -->
+
+
+            <!-- ========================================================== -->
+    <!--        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+              &lt;!&ndash; Indicators &ndash;&gt;
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              </ol>
+
+              &lt;!&ndash; Wrapper for slides &ndash;&gt;
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="..." alt="...">
+                  <div class="carousel-caption">
+                    ...
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="..." alt="...">
+                  <div class="carousel-caption">
+                    ...
+                  </div>
+                </div>
+                ...
+              </div>
+
+              &lt;!&ndash; Controls &ndash;&gt;
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>-->
+            <!-- ========================================================== -->
+
             <section class="slider">
                 <div class="container">
                     <div class="slider__block">
@@ -114,134 +154,200 @@
             <div class="divider"></div>
             <!-- Divider -->
 
-                <!-- Content -->
-                <div class="content row">
-                    <div class="col-xs-2 col-sm-6 col-lg-6 col-md-6 content__col">
-                        <div class="row">
-                            <div class="row">
-                              <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                  <img src="img/content/contimg1.png" alt=""/>
-                              </div>
-                              <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                                  <h3>Events in your area</h3>
-                                  <p class="content__col-p">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                  <p class="content__col-a"><a href="http://loftblog.ru/">Continue reading...</a></p>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="content__interval"></div>
-                        <div class="row">
-                            <div class="row">
-                              <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                  <img src="img/content/contimg2.png" alt=""/>
-                              </div>
-                              <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                                  <h3>Make design fun</h3>
-                                  <p class="content__col-p">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                  <p class="content__col-a"><a href="http://loftblog.ru/">Continue reading...</a></p>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="content__interval"></div>
-                        <div class="row">
-                            <div class="row">
-                              <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                  <img src="img/content/contimg3.png" alt=""/>
-                              </div>
-                              <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                                  <h3>Think outside the box</h3>
-                                  <p class="content__col-p">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                  <p class="content__col-a"><a href="http://loftblog.ru/">Continue reading...</a></p>
-                              </div>
-                            </div>
-                        </div>
+                <!-- events -->
+                <section class="events">
+                    <div class="container">
+                        <ul class="events__list">
+                            <li class="events__item">
+                                <a href="http://loftblog.ru/" class="events__pic">
+                                    <img src="img/content/contimg1.png" alt=""/>
+                                </a>
+                                <div class="events__text">
+                                    <div class="events__title">
+                                        Events in your area
+                                    </div>
+                                    <div class="events__description">
+                                        <div class="events__description-text">
+                                            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                                        </div>
+                                        <a class="events__description-link" href="http://loftblog.ru/">
+                                            Continue reading...
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="events__item">
+                                <a href="http://loftblog.ru/" class="events__pic">
+                                    <img src="img/content/contimg2.png" alt=""/>
+                                </a>
+                                <div class="events__text">
+                                    <div class="events__title">
+                                        Make design fun
+                                    </div>
+                                    <div class="events__description">
+                                        <div class="events__description-text">
+                                            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                                        </div>
+                                        <a class="events__description-link" href="http://loftblog.ru/">
+                                            Continue reading...
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="events__item">
+                                <a href="http://loftblog.ru/" class="events__pic">
+                                    <img src="img/content/contimg3.png" alt=""/>
+                                </a>
+                                <div class="events__text">
+                                    <div class="events__title">
+                                        Think outside the box
+                                    </div>
+                                    <div class="events__description">
+                                        <div class="events__description-text">
+                                            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                                        </div>
+                                        <a class="events__description-link" href="http://loftblog.ru/">
+                                            Continue reading...
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </li>
+                        </ul>
                     </div>
-                </div>
-                <!-- Content -->
+                </section>
+                <!-- events -->
         </div>
         <div class="empty"></div>
     </div>
 
     <!-- Footer -->
     <footer role="contentinfo">
-            <div class="footer">
-                <div class="footer__row">
-                    <div class="row">
-                        <div class="col-xs-2 col-sm-3 col-lg-3 col-md-3 footer__col">
-                            <img src="img/footer/ft-logo.png" alt=""/>
-                            <p class="footer__col-txt">
-                                Your about us information would fit here nicely.
-                            </p>
-                            <p class="footer__col-txt">
-                                You could also just have an overview and use the link below to link to you full about us page.
-                            </p>
-                            <a href="http://loftblog.ru/">
-                                Find out more...
-                            </a>
-                        </div>
-                        <div class="col-xs-2 col-sm-3 col-lg-3 col-md-3 footer__col">
-                            <p class="footer__col-herounit">
-                                TWITTER FEED
-                            </p>
-                            <p class="footer__col-txt">
-                                hey @<span class="footer__col-ttwitter">cazoobi</span> just been using WebZap, its pretty cool and a real time saver :)
-                            </p>
-                            <p class="footer__col-txt">
-                                1 day ago
-                            </p>
-                            <p class="footer__col-txt">
-                                Just purchased @<span class="footer__col-ttwitter">uiparade</span>’s
-                                awesome web developer plugin for Photoshop check it out.
-                            </p>
-                            <a href="http://webzap.uiparade.com/">
-                               webzap.uiparade.com
-                            </a>
-                        </div>
-                        <div class="col-xs-2 col-sm-3 col-lg-3 col-md-3 footer__col">
-                            <p class="footer__col-herounit">
-                                LATEST POST
-                            </p>
-                            <p class="footer__col-txt">
-                                <strong style=".myriad-c;">Your article title copy should fit here nicely!</strong>
-                            </p>
-                            <p class="footer__col-txt">
-                                May 22, 2011 • 1 Comment
-                            </p>
-                            <p class="footer__col-txt">
-                                This would be a great place to stick a descriptive excerpt from your insanley awesome article.
-                            </p>
-                            <a href="http://loftblog.ru/">
-                                Continue reading...
-                            </a>
-                        </div>
-                        <div class="col-xs-2 col-sm-3 col-lg-3 col-md-3 footer__col">
-                            <p class="footer__col-herounit">
-                                FLICKR FEED
-                            </p>
-                            <ul class="flickr-img">
-                                <li class="flickr-img__item">
-                                    <a class="flickr-img__link" href="https://www.flickr.com/"><img src="img/footer/ft-01.png" alt=""/></a>
-                                </li>
-                                <li class="flickr-img__item">
-                                    <a class="flickr-img__link" href="https://www.flickr.com/"><img src="img/footer/ft-02.png" alt=""/></a>
-                                </li>
-                                <li class="flickr-img__item">
-                                    <a class="flickr-img__link" href="https://www.flickr.com/"><img src="img/footer/ft-03.png" alt=""/></a>
-                                </li>
-                                <li class="flickr-img__item">
-                                    <a class="flickr-img__link" href="https://www.flickr.com/"><img src="img/footer/ft-04.png" alt=""/></a>
-                                </li>
-                                <li class="flickr-img__item">
-                                    <a class="flickr-img__link" href="https://www.flickr.com/"><img src="img/footer/ft-05.png" alt=""/></a>
-                                </li>
-                                <li class="flickr-img__item">
-                                    <a class="flickr-img__link" href="https://www.flickr.com/"><img src="img/footer/ft-06.png" alt=""/></a>
-                                </li>
-                            </ul>
-                        </div>
+        <div class="footer__container">
+            <div class="container">
+
+                <div class="footer__col">
+                    <div class="footer__logo">
+                        <img src="img/footer/ft-logo.png" alt=""/>
+                    </div>
+                    <div class="footer__text">
+                        Your about us information would fit here nicely.
+                    </div>
+                    <div class="footer__text">
+                        You could also just have an overview and use the link below to link to you full about us page.
+                    </div>
+                    <div class="footer__text">
+                        <a class="footer__proceed" href="http://loftblog.ru/">Find out more...</a>
                     </div>
                 </div>
+
+                <div class="footer__col footer__col_twitter">
+                    <div class="footer__title">
+                        TWITTER FEED
+                    </div>
+                    <div class="footer__text">
+                        hey @<span class="footer__col-ttwitter">cazoobi</span> just been using WebZap, its pretty cool and a real time saver :)
+
+                        <div class="post-data">
+                            1 day ago
+                        </div>
+
+                    </div>
+                    <div class="footer__text">
+
+                        Just purchased @<span class="footer__col-ttwitter">uiparade</span>’s
+                        awesome web developer plugin for Photoshop check it out.
+
+                        <a class="footer__proceed" href="http://loftblog.ru/">
+                            <i>
+                                webzap.uiparade.com
+                            </i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__col footer__col_posts">
+                    <div class="footer__title">
+                        LATEST POST
+                    </div>
+                    <div class="footer__text">
+                        <b>
+                            Your article title copy should fit here nicely!
+                        </b>
+                        <div class="post-data">
+                            <i>
+                                May 22, 2011 • 1 Comment
+                            </i>
+                        </div>
+                    </div>
+                    <div class="footer_text">
+                        This would be a great place to stick a descriptive excerpt from your insanley awesome article.
+                    </div>
+                    <div class="footer__text">
+                        <a class="footer__proceed" href="http://loftblog.ru/">
+                            <i>
+                                Continue reading...
+                            </i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__col">
+                    <div class="footer__title">
+                        FLICKR FEED
+                    </div>
+                    <ul class="flickr-gallery">
+                        <li class="flickr-gallery__item">
+                            <a class="flickr-gallery__link" href="">
+                                <img src="img/footer/ft-01.png" alt=""/>
+                            </a>
+
+                        </li>
+
+                        <li class="flickr-gallery__item">
+                            <a class="flickr-gallery__link" href="">
+                                <img src="img/footer/ft-02.png" alt=""/>
+                            </a>
+
+                        </li>
+
+                        <li class="flickr-gallery__item">
+                            <a class="flickr-gallery__link" href="">
+                                <img src="img/footer/ft-03.png" alt=""/>
+                            </a>
+
+                        </li>
+
+                        <li class="flickr-gallery__item">
+                            <a class="flickr-gallery__link" href="">
+                                <img src="img/footer/ft-04.png" alt=""/>
+                            </a>
+
+                        </li>
+
+                        <li class="flickr-gallery__item">
+                            <a class="flickr-gallery__link" href="">
+                                <img src="img/footer/ft-05.png" alt=""/>
+                            </a>
+
+                        </li>
+
+                        <li class="flickr-gallery__item">
+                            <a class="flickr-gallery__link" href="">
+                                <img src="img/footer/ft-06.png" alt=""/>
+                            </a>
+
+                        </li>
+
+                    </ul>
+                </div>
             </div>
+        </div>
+
     </footer>
     <!-- Footer -->
 
