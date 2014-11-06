@@ -1,0 +1,705 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/* author = taksenov@gmail.com */
+
+/* MainSettings */
+
+/* -------= fonts =------- */
+/* Fonts */
+@font-face {
+    font-family: "MyriadPro-Bold";
+    src: url("../../fonts/myriadpro/MyriadPro-Bold.eot");
+    src: url("../../fonts/myriadpro/MyriadPro-Bold.eot?#iefix") format("embedded-opentype"),
+         url("../../fonts/myriadpro/MyriadPro-Bold.woff") format("woff"),
+         url("../../fonts/myriadpro/MyriadPro-Bold.ttf") format("truetype"),
+         url("../../fonts/myriadpro/MyriadPro-Bold.svg#MyriadPro-Bold") format("svg");
+}
+@font-face {
+    font-family: "MyriadPro-BoldCond";
+    src: url("../../fonts/myriadpro/MyriadPro-BoldCond.eot");
+    src: url("../../fonts/myriadpro/MyriadPro-BoldCond.eot?#iefix") format("embedded-opentype"),
+         url("../../fonts/myriadpro/MyriadPro-BoldCond.woff") format("woff"),
+         url("../../fonts/myriadpro/MyriadPro-BoldCond.ttf") format("truetype"),
+         url("../../fonts/myriadpro/MyriadPro-BoldCond.svg#MyriadPro-BoldCond") format("svg");
+}
+@font-face {
+    font-family: "MyriadPro-BoldCondIt_0";
+    src: url("../../fonts/myriadpro/MyriadPro-BoldCondIt_0.eot");
+    src: url("../../fonts/myriadpro/MyriadPro-BoldCondIt_0.eot?#iefix") format("embedded-opentype"),
+         url("../../fonts/myriadpro/MyriadPro-BoldCondIt_0.woff") format("woff"),
+         url("../../fonts/myriadpro/MyriadPro-BoldCondIt_0.ttf") format("truetype"),
+         url("../../fonts/myriadpro/MyriadPro-BoldCondIt_0.svg#MyriadPro-BoldCondIt_0") format("svg");
+}
+@font-face {
+    font-family: "MyriadPro-Cond";
+    src: url("../../fonts/myriadpro/MyriadPro-Cond.eot");
+    src: url("../../fonts/myriadpro/MyriadPro-Cond.eot?#iefix") format("embedded-opentype"),
+         url("../../fonts/myriadpro/MyriadPro-Cond.woff") format("woff"),
+         url("../../fonts/myriadpro/MyriadPro-Cond.ttf") format("truetype"),
+         url("../../fonts/myriadpro/MyriadPro-Cond.svg#MyriadPro-Cond") format("svg");
+}
+@font-face {
+    font-family: "MyriadPro-It";
+    src: url("../../fonts/myriadpro/MyriadPro-It.eot");
+    src: url("../../fonts/myriadpro/MyriadPro-It.eot?#iefix") format("embedded-opentype"),
+         url("../../fonts/myriadpro/MyriadPro-It.woff") format("woff"),
+         url("../../fonts/myriadpro/MyriadPro-It.ttf") format("truetype"),
+         url("../../fonts/myriadpro/MyriadPro-It.svg#MyriadPro-It") format("svg");
+}
+@font-face {
+    font-family: "MyriadPro-Regular";
+    src: url("../../fonts/myriadpro/MyriadPro-Regular.eot");
+    src: url("../../fonts/myriadpro/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"),
+         url("../../fonts/myriadpro/MyriadPro-Regular.woff") format("woff"),
+         url("../../fonts/myriadpro/MyriadPro-Regular.ttf") format("truetype"),
+         url("../../fonts/myriadpro/MyriadPro-Regular.svg#MyriadPro-Regular") format("svg");
+}
+@font-face {
+    font-family: "MyriadPro-Semibold";
+    src: url("../../fonts/myriadpro/MyriadPro-Semibold.eot");
+    src: url("../../fonts/myriadpro/MyriadPro-Semibold.eot?#iefix") format("embedded-opentype"),
+         url("../../fonts/myriadpro/MyriadPro-Semibold.woff") format("woff"),
+         url("../../fonts/myriadpro/MyriadPro-Semibold.ttf") format("truetype"),
+         url("../../fonts/myriadpro/MyriadPro-Semibold.svg#MyriadPro-Semibold") format("svg");
+}
+
+/* -------= fonts =------- */
+
+
+/* MIXINS */
+/* by https://bitbucket.org/wowua/ */
+
+.inlineblock {
+	display: inline-block;
+	vertical-align: top;
+
+	zoom: 1 !ie;
+	display: inline !ie;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1; /* IE < 8 */
+}
+
+
+/*==============================================================================*/
+
+/* @container-width : 940px;
+ @footer-height   : 290px;*/
+/*//colors ----
+@link-color: #2a99d8;
+//-----------*/
+
+.wrapper {
+    position: relative;
+    min-height: 670px;
+    height: auto !important;
+    height: 100%;
+    overflow: hidden;
+    min-width: 1010px;
+
+}
+.empty {
+    position: relative;
+    height: 290px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    padding: 0;
+    left: 0;
+    list-style: none outside none;
+}
+p {
+    padding: 0;
+    margin: 0;
+}
+footer {
+    position: relative;
+    margin-top: -290px;
+    height: 290px;
+}
+*{
+    font-family: "MyriadPro-Regular";
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.container {
+    width: 940px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* ------------------------------------------- */
+
+/* Maincontent */
+.maincontent {
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+/* ------------------------------------------- */
+/* Header */
+.header {
+    margin-bottom: 60px;
+}
+/* ------------------------------------------- */
+/* Navbar */
+.navbar {
+    .clearfix;
+    width: 940px;
+    height: 50px;
+    margin: auto;
+    background: #f96810; /* Для старых браузров */
+    background: linear-gradient(to top, #fa711e, #f95f01);
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    behavior: url(PIE.htc);
+    border: 1px solid #b54501;
+}
+.navbar__logo {
+    display: block;
+    float: left;
+    width: 200px;
+    height: 50px;
+    position: relative;
+    border-top: 1px solid #fc9f67;
+    border-right: 1px solid #fc9f67;
+}
+.navbar__logo-img {
+    max-width: 150px;
+    max-height: 20px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.navbar__logo-text {
+    position: absolute;
+    top: 0;
+    left: -99999px;
+}
+
+.navbar__labels {
+    float: left;
+    height: 50px;
+    border-left: solid 1px #b54501;
+}
+.navbar__labels ul {
+       .clearfix;
+}
+.navbar__labels ul li {
+        float: left;
+        border-right: 1px solid #b54501;
+}
+.navbar__labels ul li a {
+        color: #813101;
+        display: block;
+        text-decoration: none;
+        line-height: 50px;
+        text-align: center;
+        width: 90px;
+        height: 50px;
+        font-weight: 700;
+        font-size: 14px;
+        .transition(0.2s);
+        border-top: 1px solid #fc9f67;
+        border-right: 1px solid #fc9f67;
+        border-left: 1px solid #fc9f67;
+}
+.navbar__labels ul li a:hover {
+        background: #d4580d;
+        color: #ffffff;
+        text-shadow: 0 0 5px #fff;
+        font-weight: 700;
+        font-size: 14px;
+}
+
+.navbar__search {
+    float: left;
+    margin-top: 15px;
+    margin-left: 7px;
+}
+.form {
+    position: relative;
+}
+.navbar__search-input {
+    background: #fff;
+    .border-radius(10px);
+/*    behavior: url(PIE.htc);*/
+    float: right;
+    margin-right: 14px;
+    height: 20px;
+    width: 170px;
+    box-shadow: 0 1px 0 #fa7e34;
+    padding: 0 2px 0 22px;
+/*    behavior: url(PIE.htc);*/
+}
+.navbar__search-submit {
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: url("../../img/navbar/search-icon.png") 0 0 no-repeat;
+    width: 13px;
+    height: 12px;
+    border: 0 none;
+    padding: 0;
+}
+/* ------------------------------------------- */
+/* Slider */
+.slider {
+    margin-bottom: 50px;
+}
+.slider__block {
+    border: solid 1px #2c6f90;
+    width: 940px;
+    height: 350px;
+    margin: 0 auto;
+    background: url("../../img/slider/slider-bg.png") #4b7486;
+    color: #ffffff;
+}
+.slider__block-right {
+    width: 239px;
+    height: 349px;
+    float: right;
+    /* взято с htmlbook.ru */
+    background: #000000;        /*Цвет фона */
+    opacity: 0.39;              /*Полупрозрачный фон */
+    filter: alpha(Opacity=39);  /*Прозрачность в IE */
+    color: #ffffff;             /* Цвет текста */
+    /* ------------------- */
+    margin: 0;
+    padding: 0;
+}
+.item h2 {
+    /* почему-то текст в слайдере остается серым,
+    видимо это из-за применения полупрозрачности
+    в селекторе .ts_slider_right. Как полечить знаю(!).
+    Вот ссылка на лекарство: http://habrahabr.ru/post/30565/
+    todo сделать правильную прозрачность!
+      */
+    font-family: "MyriadPro-Cond";
+    color: #ffffff;
+    padding: 10px 10px 12px 20px;
+    opacity: 1;
+    filter: alpha(Opacity=100);
+    font-size: 30px;
+    overflow: hidden;
+    height: 64px;
+}
+.item p {
+    .myriad-r;
+    padding: 12px 10px 10px 20px;
+    opacity: 1;
+    filter: alpha(Opacity=100);
+    color: #dcdcdc;
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+    height: 180px;
+}
+/* ------------------------------------------- */
+/* HeroUnit */
+.herounit {
+    padding: 5px;
+    text-align: center;
+}
+.herounit__text {
+    .inlineblock;
+    width: 600px;
+    margin: 0 auto;
+    color: #959595;
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+    height: 50px;
+}
+/* ------------------------------------------- */
+/* Divider */
+.divider {
+    margin: 55px auto 20px;
+    background-color: #d2d0d0;
+    width: 940px;
+    height: 1px;
+}
+/* ------------------------------------------- */
+/* events */
+.clearfix:before,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1; /* IE < 8 */
+}
+.events__item {
+/*    content: ".";
+ *//* IE < 8 */
+
+    display: block;
+
+    overflow: hidden;
+    clear: both;
+    zoom: 1;
+
+
+    width: 470px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.events__pic {
+    display: block;
+    float: left;
+    width: 144px;
+}
+/*.events__pic img {
+        display: block;
+        max-width: 144px;
+        max-height: 144px;
+}*/
+
+.events__text {
+    width: 305px;
+    float: right;
+}
+.events__title {
+    font-size: 22px;
+    line-height: 24px;
+    font-family: "MyriadPro-Cond";
+    margin-bottom: 15px;
+}
+.events__description {
+    position: relative;
+    padding-bottom: 30px;
+}
+.events__description-text {
+    height: 70px;
+    overflow: hidden;
+}
+.events__description-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+ }
+/* ------------------------------------------- */
+/* Footer */
+.footer__container {
+    border-top: 1px solid #dedddd;
+    background: #ededed;
+}
+.footer__col {
+
+    display: inline-block;
+	vertical-align: top;
+
+	zoom: 1 !ie;
+	display: inline !ie;
+
+
+
+    width: 225px;
+    margin: 60px auto;
+}
+.footer__logo {
+    margin-bottom: 20px;
+}
+.footer__text {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 15px;
+}
+.footer__proceed {
+    color: #2a99d8;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+}
+.footer__col-ttwitter {
+    color: #2a99d8;
+    font-size: 12px;
+    font-weight: 600;
+}
+.footer__title {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: "MyriadPro-Cond";
+    line-height: 16px;
+    margin-bottom: 20px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1; /* IE < 8 */
+}
+.flickr-gallery {
+
+    margin-left: -20px;
+}
+.flickr-gallery__item {
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.flickr-gallery__link {
+    display: block;
+    padding: 2px;
+    background: #ffffff;
+}
+.flickr-gallery__link img {
+        display: block;
+        max-width: 56px;
+        max-height: 56px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/*@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}*/
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
